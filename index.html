@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Notebook Loader</title>
+
+    <!-- Include CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Include JavaScript -->
+    <script defer src="app.js"></script>
+
+    <!-- Include PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <!-- Include Marked.js for Markdown Parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Notebook Loader</h1>
+
+
+<!-- URL Input Section -->
+        <div class="url-loader">
+            <label for="notebook-url">Enter URL to .ipynb:</label>
+            <input type="text" id="notebook-url" placeholder="Enter notebook URL here">
+            <button id="fetch-notebook">Fetch Notebook</button>
+        </div>
+
+        <!-- File Upload Button -->
+        <button id="load-notebook">Load .ipynb File</button>
+        <input type="file" id="notebook-input" accept=".ipynb" style="display: none;">
+
+        
+
+        <!-- Sample Notebook Buttons -->
+        <div class="sample-buttons">
+            <h3>Sample Notebooks</h3>
+            <button class="sample-button" data-url="./samples/sample1.ipynb">Sample 1</button>
+            <button class="sample-button" data-url="./samples/sample2.ipynb">Sample 2</button>
+            <button class="sample-button" data-url="./samples/sample3.ipynb">Sample 3</button>
+        </div>
+
+        <!-- Display Notebook Content -->
+        <div id="notebook-content"></div>
+
+        
+    </div>
+</body>
+</html>
